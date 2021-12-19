@@ -1,0 +1,6 @@
+# Logs and databases
+*.sqlite3
+*.json
+
+# text files
+*.txt

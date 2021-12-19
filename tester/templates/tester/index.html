@@ -1,0 +1,28 @@
+{% if tenq %}
+    <form action="{% url '10q-result' %}" method="get">
+        <ul>
+            {% for q in tenq %}
+                <li> 
+                    <h3>{{ q.topic }}{{q.id}}</h3>
+                    <img src="{{ q.imageUrl }}" border="0"><br>
+                        <input type="radio" name="{{ q.id }}" value="A">
+                        <label>A</label>
+                        <br>
+                        <input type="radio" name="{{ q.id }}" value="B">
+                        <label>B</label>
+                        <br>
+                        <input type="radio" name="{{ q.id }}" value="C">
+                        <label>C</label>
+                        <br>
+                        <input type="radio" name="{{ q.id }}" value="D">
+                        <label>D</label>
+                        <br>
+                    
+                </li>   
+            {% endfor %}
+        </ul>
+        <input type="submit" value="submit">
+    </form>
+{% else %}
+    <p> No question available.</p>
+{% endif %}
